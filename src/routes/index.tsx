@@ -53,20 +53,29 @@ const founders = [
 function App() {
 	return (
 		<main>
-			<section className="relative px-5 py-20 md:px-10 md:py-24 lg:py-30 min-h-144 flex items-center">
+			<section className="relative px-5 py-20 md:px-10 md:py-24 lg:py-30 flex items-center min-h-screen">
 				<div className="wrapper">
-					<div className="relative z-10">
+					<div className="mb-4">
 						<h1 className="text-5xl md:text-7xl xl:text-8xl text-secondary-foreground tracking-[.5rem] md:tracking-[1rem] leading-tight uppercase text-center">
 							The Hawkins Co
 						</h1>
-						{/* <p className="text-center text-white md:text-xl">
-							Software development + consulting
-						</p> */}
 					</div>
-					<div className="absolute inset-0">
+					<div className="absolute bottom-5 right-5 md:relative md:bottom-auto md:right-auto  md:mx-auto flex items-center md:justify-center">
+						<Typewriter
+							text="coming soon"
+							tag="p"
+							className=" text-center text-white md:text-xl z-10"
+						/>
+						{/* <span className="inline-flex text-white animate-ellipsis-container">
+							<span className="animate-ellipsis inline-block w-2">.</span>
+							<span className="animate-ellipsis inline-block w-2">.</span>
+							<span className="animate-ellipsis inline-block w-2">.</span>
+						</span> */}
+					</div>
+					<div className="absolute inset-0 -z-10">
 						<Image
 							src="/images/HAWKINS-90.webp"
-							alt="Description of image"
+							alt="Man, woman, and child standing and hugging each other"
 							layout="fullWidth"
 							className="absolute inset-0 w-full h-full object-cover"
 						/>
@@ -74,7 +83,7 @@ function App() {
 					</div>
 				</div>
 			</section>
-			<section className="px-5 py-10 md:px-10 md:py-16 lg:py-20 bg-background">
+			{/* <section className="px-5 py-10 md:px-10 md:py-16 lg:py-20 bg-background">
 				<div className="wrapper">
 					<div className="grid grid-cols-10 lg:grid-rows-3 gap-5">
 						<div className="col-span-full lg:col-span-6 row-span-1 col-start-1 row-start-1 lg:self-end">
@@ -160,8 +169,9 @@ function App() {
 						tag="span"
 						className="text-5xl tracking-[.5rem] md:text-7xl md:tracking-[1rem] uppercase text-primary-foreground block mb-6"
 					/>
+					*}
 					{/* <h2 className="text-5xl tracking-[.5rem] md:text-7xl md:tracking-[1rem] uppercase text-primary-foreground block mb-6">Our Why</h2> */}
-					<MotionHandDrawnArrow className="mr-auto ml-0 sm:ml-8 md:ml-auto md:mr-16 -scale-x-100 md:scale-x-100" />
+			{/* <MotionHandDrawnArrow className="mr-auto ml-0 sm:ml-8 md:ml-auto md:mr-16 -scale-x-100 md:scale-x-100" />
 				</div>
 				<div className="absolute inset-0 bg-black/50 md:bg-black/25"></div>
 			</section>
@@ -256,7 +266,7 @@ function App() {
 						className="w-full aspect-square object-cover"
 					/>
 				</div>
-			</section>
+			</section>  */}
 		</main>
 	);
 }

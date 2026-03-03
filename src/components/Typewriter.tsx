@@ -37,25 +37,31 @@ export const Typewriter = ({
 			variants={sentenceVariants}
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: true, margin: "-100px" }}
+			viewport={{ once: true }}
 			onAnimationStart={() => {
 				setIsTypingComplete(false);
 				setIsTyping(true);
 			}}
 			onAnimationComplete={() => {
-				setIsTypingComplete(true);
 				setIsTyping(false);
+				setTimeout(() => {
+					setIsTypingComplete(true);
+				}, 3500);
 			}}
 			{...props}
 		>
 			{text.split("").map((char, i) => (
-				<motion.span key={`${char}-${i}`} variants={letterVariants}>
+				<motion.span
+					key={`${char}-${i}`}
+					variants={letterVariants}
+					className="inline-block"
+				>
 					{char}
 				</motion.span>
 			))}
 			<motion.span
 				aria-hidden="true"
-				animate={{ opacity: isTyping ? 1 : isTypingComplete ? 0 : [0, 1, 0] }}
+				animate={{ opacity: isTyping ? 1 : isTypingComplete ? 0 : [1, 0, 1] }}
 				transition={
 					isTypingComplete || isTyping
 						? { duration: 0 }
