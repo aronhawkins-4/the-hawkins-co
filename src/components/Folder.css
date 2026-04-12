@@ -70,7 +70,7 @@
   width: 100px;
   height: 80px;
   background: var(--folder-back-color);
-  border-radius: 0px 10px 10px 10px;
+  border-radius: 0px .25rem  .25rem .25rem;
 }
 
 .folder__back::after {
@@ -82,7 +82,7 @@
   width: 30px;
   height: 10px;
   background: var(--folder-back-color);
-  border-radius: 5px 5px 0 0;
+  border-radius: .125rem .125rem 0 0;
 }
 
 .paper {

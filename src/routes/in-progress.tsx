@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
 import { ContactForm } from "@/components/ContactForm";
 import Folder from "@/components/Folder";
+import { FolderIcon } from "@/components/FolderIcon";
 import { Typewriter } from "@/components/Typewriter";
 import { Button } from "@/components/ui/button";
 import {
@@ -198,29 +199,6 @@ function App() {
 					</div>
 				</div>
 			</section>
-			<section className="relative px-5 pb-20 md:px-10 md:pb-24 lg:pb-30 min-h-144 flex items-center">
-				<div className="wrapper">
-					<Typewriter
-						text="Our Work"
-						className="text-5xl uppercase tracking-[.5rem] leading-tight text-center mb-16"
-					/>
-					<div className="grid gap-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center justify-items-center max-w-fit mx-auto mb-20">
-						{[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-							<Folder
-								key={i}
-								color="#343133"
-								className="custom-folder"
-								size={1}
-							/>
-						))}
-					</div>
-					<p className="text-center">
-						p.s. if your project is something new or different from what you see
-						here, we love learning new things{" "}
-						<span className="text-2xl ml-6">👀</span>
-					</p>
-				</div>
-			</section>
 			<section className="flex flex-col-reverse md:flex-row">
 				<div className="basis-full md:basis-1/3 px-5 md:px-10 xl:px-20 py-10 lg:py-20 xl:py-30">
 					<div className="h-full max-w-2xl mx-auto flex flex-col justify-between">
@@ -258,5 +236,5 @@ function App() {
 				</div>
 			</section>
 		</main>
-	)
+	);
 }
